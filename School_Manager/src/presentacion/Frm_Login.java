@@ -1,8 +1,12 @@
 package presentacion;
 
+import datos.Dt_Usuario;
+
 import com.formdev.flatlaf.FlatLightLaf;
+import entidades.Usuario;
 import java.awt.Color;
 import java.time.LocalDate;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /**
@@ -13,6 +17,10 @@ import javax.swing.UIManager;
  */
 
 public class Frm_Login extends javax.swing.JFrame {
+    
+    private Dt_Usuario dt_user = new Dt_Usuario();
+    
+    private Usuario user = new Usuario();
 
     public Frm_Login() {
         initComponents();
@@ -218,8 +226,21 @@ public class Frm_Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jTPasswordActionPerformed
 
     private void jBIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIngresarActionPerformed
-        // TODO add your handling code here:
+        //jTextField.getText().trim().isEmpty = evrifica que no este vacio y que no este vacio con espacios
+        String username = jTUsername.getText();
+        String clave = jTPassword.getText();
         
+        if(jTUsername.getText().trim().isEmpty() || jTPassword.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Llene los cuadros faltantes", "Error al iniciar sesion" , JOptionPane.WARNING_MESSAGE);
+        }
+            else{   
+                if(dt_user.validarUsuario(username,clave)){
+                    JOptionPane.showMessageDialog (this, "El Usuario fue editado con éxito!", "MENSAJE", JOptionPane.INFORMATION_MESSAGE);
+                }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Datos incorrectos, intente con otro usuario", "Error al iniciar sesion" , JOptionPane.WARNING_MESSAGE);
+                    }
+            }
     }//GEN-LAST:event_jBIngresarActionPerformed
 
     private void jLNuevaCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNuevaCuentaMouseClicked
