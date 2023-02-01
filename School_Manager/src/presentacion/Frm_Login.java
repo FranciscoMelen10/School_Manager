@@ -5,6 +5,7 @@
 package presentacion;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Color;
 import java.time.LocalDate;
 import javax.swing.UIManager;
 
@@ -111,6 +112,12 @@ public class Frm_Login extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLNuevaCuentaMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLNuevaCuentaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLNuevaCuentaMouseExited(evt);
+            }
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -123,28 +130,6 @@ public class Frm_Login extends javax.swing.JFrame {
         jPRegister.setLayout(jPRegisterLayout);
         jPRegisterLayout.setHorizontalGroup(
             jPRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(jPRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
-                        .addGroup(jPRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(33, 33, 33)))
-                        .addGap(119, 119, 119))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
-                        .addComponent(jLDate, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(168, 168, 168))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
-                        .addComponent(jBIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(173, 173, 173))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
-                        .addComponent(jLNuevaCuenta)
-                        .addGap(134, 134, 134))))
             .addGroup(jPRegisterLayout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(jPRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,12 +139,32 @@ public class Frm_Login extends javax.swing.JFrame {
                         .addComponent(jTPassword)
                         .addComponent(jTUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(jPRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
+                        .addComponent(jBIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(173, 173, 173))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
+                        .addComponent(jLNuevaCuenta)
+                        .addGap(134, 134, 134))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
+                        .addGroup(jPRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLDate, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(173, 173, 173))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPRegisterLayout.createSequentialGroup()
+                        .addComponent(jLIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125))))
         );
         jPRegisterLayout.setVerticalGroup(
             jPRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPRegisterLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLDate, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -188,14 +193,14 @@ public class Frm_Login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
                 .addContainerGap(98, Short.MAX_VALUE)
                 .addComponent(jPRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96))
+                .addGap(90, 90, 90))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(jPRegister, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -239,6 +244,16 @@ public class Frm_Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTPassword.setText("");
     }//GEN-LAST:event_jTPasswordMouseClicked
+
+    private void jLNuevaCuentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNuevaCuentaMouseEntered
+        // TODO add your handling code here:
+        jLNuevaCuenta.setForeground(Color.blue);
+    }//GEN-LAST:event_jLNuevaCuentaMouseEntered
+
+    private void jLNuevaCuentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNuevaCuentaMouseExited
+        // TODO add your handling code here:
+        jLNuevaCuenta.setForeground(Color.black);
+    }//GEN-LAST:event_jLNuevaCuentaMouseExited
 
     /**
      * @param args the command line arguments
