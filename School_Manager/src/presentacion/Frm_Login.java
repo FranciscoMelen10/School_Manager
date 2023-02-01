@@ -1,9 +1,16 @@
 package presentacion;
 
+
+//Datos
 import datos.Dt_Usuario;
 
-import com.formdev.flatlaf.FlatLightLaf;
+
+//Entidades
 import entidades.Usuario;
+
+
+//Librerias
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import java.time.LocalDate;
 import javax.swing.JOptionPane;
@@ -17,6 +24,8 @@ import javax.swing.UIManager;
  */
 
 public class Frm_Login extends javax.swing.JFrame {
+    
+    private Frm_Principal prin = new Frm_Principal();
     
     private Dt_Usuario dt_user = new Dt_Usuario();
     
@@ -245,7 +254,7 @@ public class Frm_Login extends javax.swing.JFrame {
 
     private void jLNuevaCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNuevaCuentaMouseClicked
         // TODO add your handling code here:
-        System.out.println("hola");
+        prin.setVisible(true);
     }//GEN-LAST:event_jLNuevaCuentaMouseClicked
 
     private void jTUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTUsernameMouseClicked
