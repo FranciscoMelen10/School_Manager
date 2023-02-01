@@ -227,7 +227,7 @@ public class Frm_Login extends javax.swing.JFrame {
 
     private void jLNuevaCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNuevaCuentaMouseClicked
         // TODO add your handling code here:
-        
+        System.out.println("hola");
     }//GEN-LAST:event_jLNuevaCuentaMouseClicked
 
     private void jTUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTUsernameMouseClicked
@@ -249,22 +249,18 @@ public class Frm_Login extends javax.swing.JFrame {
         UIManager.put( "Button.arc", 999 );
         UIManager.put( "TextComponent.arc", 999 );
         UIManager.put( "TabbedPane.showTabSeparators", true );
-        
-        
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        
-        
+
         try {
             UIManager.setLookAndFeel( new FlatLightLaf() );
         } catch( Exception ex ) {
             System.err.println( "Failed to initialize LaF" );
         }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
