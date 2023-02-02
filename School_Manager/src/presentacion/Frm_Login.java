@@ -11,6 +11,11 @@ import entidades.Usuario;
 
 //Librerias
 import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.intellijthemes.FlatSolarizedLightIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatGitHubDarkContrastIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMonokaiProIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatSolarizedLightContrastIJTheme;
 import java.awt.Color;
 import java.time.LocalDate;
 import javax.swing.JOptionPane;
@@ -25,13 +30,13 @@ import javax.swing.UIManager;
 
 public class Frm_Login extends javax.swing.JFrame {
     
-    private Frm_Principal prin = new Frm_Principal();
     
     private Dt_Usuario dt_user = new Dt_Usuario();
     
     private Usuario user = new Usuario();
 
     public Frm_Login() {
+        FlatSolarizedLightContrastIJTheme.setup();
         initComponents();
         Styles();
         SetDate();
@@ -39,6 +44,10 @@ public class Frm_Login extends javax.swing.JFrame {
     
     private void Styles(){
         jLIniciar.putClientProperty("FlatLaf.styleClass", "h1" );
+        //Styles FlatLaf
+        UIManager.put( "Button.arc", 999 );
+        UIManager.put( "TextComponent.arc", 999 );
+        UIManager.put( "TabbedPane.showTabSeparators", true );
     }
     
     private void SetDate(){
@@ -74,11 +83,13 @@ public class Frm_Login extends javax.swing.JFrame {
         jPRegister.setBackground(new java.awt.Color(187, 225, 250));
         jPRegister.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 153, 255), 10));
 
+        jLIniciar.setForeground(new java.awt.Color(0, 0, 0));
         jLIniciar.setText("Iniciar sesión");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/AvatarLogin.png"))); // NOI18N
 
         jLDate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLDate.setForeground(new java.awt.Color(0, 0, 0));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
@@ -107,6 +118,7 @@ public class Frm_Login extends javax.swing.JFrame {
             }
         });
 
+        jBIngresar.setBackground(new java.awt.Color(27, 38, 44));
         jBIngresar.setText("Ingresar");
         jBIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +127,7 @@ public class Frm_Login extends javax.swing.JFrame {
         });
 
         jLNuevaCuenta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLNuevaCuenta.setForeground(new java.awt.Color(0, 0, 0));
         jLNuevaCuenta.setText("Registra una cuenta nueva");
         jLNuevaCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -128,10 +141,13 @@ public class Frm_Login extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre de usuario");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Contraseña de usuario");
 
         javax.swing.GroupLayout jPRegisterLayout = new javax.swing.GroupLayout(jPRegister);
@@ -245,6 +261,7 @@ public class Frm_Login extends javax.swing.JFrame {
             else{   
                 if(dt_user.validarUsuario(username,clave)){
                     JOptionPane.showMessageDialog (this, "El Usuario fue editado con éxito!", "MENSAJE", JOptionPane.INFORMATION_MESSAGE);
+                    //prin.setVisible(true);
                 }
                     else{
                         JOptionPane.showMessageDialog(null, "Datos incorrectos, intente con otro usuario", "Error al iniciar sesion" , JOptionPane.WARNING_MESSAGE);
@@ -254,7 +271,9 @@ public class Frm_Login extends javax.swing.JFrame {
 
     private void jLNuevaCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNuevaCuentaMouseClicked
         // TODO add your handling code here:
+        Frm_Principal prin = new Frm_Principal();
         prin.setVisible(true);
+
     }//GEN-LAST:event_jLNuevaCuentaMouseClicked
 
     private void jTUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTUsernameMouseClicked
@@ -282,11 +301,12 @@ public class Frm_Login extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-        //Styles FlatLaf
         UIManager.put( "Button.arc", 999 );
         UIManager.put( "TextComponent.arc", 999 );
         UIManager.put( "TabbedPane.showTabSeparators", true );
 
+        //Lights Flatlaf
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
