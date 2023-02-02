@@ -11,10 +11,6 @@ import entidades.Usuario;
 
 //Librerias
 import com.formdev.flatlaf.FlatLightLaf;
-import com.formdev.flatlaf.intellijthemes.FlatSolarizedLightIJTheme;
-import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatGitHubDarkContrastIJTheme;
-import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
-import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMonokaiProIJTheme;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatSolarizedLightContrastIJTheme;
 import java.awt.Color;
 import java.time.LocalDate;
@@ -30,9 +26,10 @@ import javax.swing.UIManager;
 
 public class Frm_Login extends javax.swing.JFrame {
     
-    
+    //Datos
     private Dt_Usuario dt_user = new Dt_Usuario();
     
+    //Entidades
     private Usuario user = new Usuario();
 
     public Frm_Login() {
@@ -261,7 +258,9 @@ public class Frm_Login extends javax.swing.JFrame {
             else{   
                 if(dt_user.validarUsuario(username,clave)){
                     JOptionPane.showMessageDialog (this, "El Usuario fue editado con éxito!", "MENSAJE", JOptionPane.INFORMATION_MESSAGE);
-                    //prin.setVisible(true);
+                    this.setVisible(false);
+                    Frm_Principal prin = new Frm_Principal();
+                    prin.setVisible(true);
                 }
                     else{
                         JOptionPane.showMessageDialog(null, "Datos incorrectos, intente con otro usuario", "Error al iniciar sesion" , JOptionPane.WARNING_MESSAGE);
@@ -271,8 +270,7 @@ public class Frm_Login extends javax.swing.JFrame {
 
     private void jLNuevaCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNuevaCuentaMouseClicked
         // TODO add your handling code here:
-        Frm_Principal prin = new Frm_Principal();
-        prin.setVisible(true);
+        
 
     }//GEN-LAST:event_jLNuevaCuentaMouseClicked
 

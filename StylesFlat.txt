@@ -1,3 +1,5 @@
+Running FlatLaf:
+
 try {
     UIManager.setLookAndFeel( new FlatLightLaf() );
 } catch( Exception ex ) {
@@ -5,25 +7,24 @@ try {
 }
 
 
-desing aplication:
 
+Desing aplication:
 
-
-
-
-
-
-themes:
-
+Colors:
 1B262C : 1 
-27, 38, 44
+[27, 38, 44]
 
 0F4C75 : 2
-15,76,117
+[15,76,117]
 
 3282B8 : 3
-50,130,184
-
+[50,130,184]
 
 BBE1FA : 4
-187,225,250
+[187,225,250]
+
+
+Theme:
+
+Login: FlatSolarizedLightContrastIJTheme
+Frm_Principal: FlatNightOwlIJTheme
