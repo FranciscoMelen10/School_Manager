@@ -13,7 +13,10 @@ import entidades.Usuario;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatSolarizedLightContrastIJTheme;
 import java.awt.Color;
+import java.awt.Image;
+import java.io.File;
 import java.time.LocalDate;
+import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -34,19 +37,30 @@ public class Frm_Login extends javax.swing.JFrame {
 
     public Frm_Login() {
         FlatSolarizedLightContrastIJTheme.setup();
-        initComponents();
+        initComponents(); 
+        CargarImagen();
         Styles();
         SetDate();
     }
     
     private void Styles(){
-        jLIniciar.putClientProperty("FlatLaf.styleClass", "h1" );
         //Styles FlatLaf
+        jLIniciar.putClientProperty("FlatLaf.styleClass", "h1" );
         UIManager.put( "Button.arc", 999 );
         UIManager.put( "TextComponent.arc", 999 );
         UIManager.put( "TabbedPane.showTabSeparators", true );
     }
     
+    private void CargarImagen(){
+        try {
+            Image img = ImageIO.read(new File("School Manager Icon.png"));
+            this.setIconImage(img);
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+                
     private void SetDate(){
         LocalDate now = LocalDate.now();
         int dia = now.getDayOfMonth();

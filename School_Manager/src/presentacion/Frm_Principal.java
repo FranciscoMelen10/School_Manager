@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.File;
+import javax.imageio.ImageIO;
 
 
 /**
@@ -19,7 +21,7 @@ public class Frm_Principal extends javax.swing.JFrame {
     public Frm_Principal() {
         FlatNightOwlIJTheme.setup();
         initComponents();
-        //setIconImage(ne);
+        CargarImagen();
         this.setLocationRelativeTo(null);
         dimensionPantalla();
     }
@@ -27,12 +29,19 @@ public class Frm_Principal extends javax.swing.JFrame {
     private void dimensionPantalla(){
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension size_pantalla = tk.getScreenSize();
-        
         double widht = size_pantalla.getWidth();
-        double height = size_pantalla.getHeight();
-        
+        double height = size_pantalla.getHeight();        
         System.out.println(widht + "X" + height );
-        
+    }
+    
+        private void CargarImagen(){
+        try {
+            Image img = ImageIO.read(new File("School Manager Icon.png"));
+            this.setIconImage(img);
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     
@@ -51,7 +60,6 @@ public class Frm_Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("School Manager");
         setExtendedState(6);
-        setIconImages(null);
         setLocationByPlatform(true);
         setUndecorated(true);
 
@@ -72,16 +80,16 @@ public class Frm_Principal extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addComponent(jLabel1)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(524, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(538, Short.MAX_VALUE))
         );
 
         Background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 280, 740));
