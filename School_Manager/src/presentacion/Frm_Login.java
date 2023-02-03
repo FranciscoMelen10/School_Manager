@@ -46,9 +46,12 @@ public class Frm_Login extends javax.swing.JFrame {
     private void Styles(){
         //Styles FlatLaf
         jLIniciar.putClientProperty("FlatLaf.styleClass", "h1" );
-        UIManager.put( "Button.arc", 999 );
-        UIManager.put( "TextComponent.arc", 999 );
-        UIManager.put( "TabbedPane.showTabSeparators", true );
+        jBIngresar.putClientProperty("JButton.buttonType", "roundRect");
+//        jTUsername.putClientProperty("JTextField.TextFieldType", "roundRect");
+//        
+//        
+//        UIManager.put( "TextComponent.arc", 999 );
+//        UIManager.put( "TabbedPane.showTabSeparators", true );
     }
     
     private void CargarImagen(){
@@ -313,9 +316,7 @@ public class Frm_Login extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-        UIManager.put( "Button.arc", 999 );
-        UIManager.put( "TextComponent.arc", 999 );
-        UIManager.put( "TabbedPane.showTabSeparators", true );
+        
 
         //Lights Flatlaf
         

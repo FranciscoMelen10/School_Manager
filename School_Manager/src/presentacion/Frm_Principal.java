@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.io.File;
+import java.time.LocalDate;
 import javax.imageio.ImageIO;
 
 
@@ -24,6 +25,15 @@ public class Frm_Principal extends javax.swing.JFrame {
         CargarImagen();
         this.setLocationRelativeTo(null);
         dimensionPantalla();
+        SetDate();
+    }
+    
+    private void SetDate(){
+        LocalDate now = LocalDate.now();
+        int dia = now.getDayOfMonth();
+        int mes = now.getMonthValue();
+        int year = now.getYear();
+        jLFecha.setText(dia + "/" + mes + "/" + year);
     }
     
     private void dimensionPantalla(){
@@ -51,14 +61,21 @@ public class Frm_Principal extends javax.swing.JFrame {
 
         Background = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel6 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jPanelSubThings = new javax.swing.JPanel();
+        jpMin = new javax.swing.JPanel();
         jLCerrar = new javax.swing.JLabel();
         jLMinimizar = new javax.swing.JLabel();
+        jLFecha = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("School Manager");
+        setAutoRequestFocus(false);
         setExtendedState(6);
         setLocationByPlatform(true);
         setUndecorated(true);
@@ -68,46 +85,46 @@ public class Frm_Principal extends javax.swing.JFrame {
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(15, 76, 117));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("FOTO COLEGIO");
-        jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel2.setText("Control general");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jLabel1)
-                .addContainerGap(53, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(538, Short.MAX_VALUE))
-        );
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 260, 10));
 
-        Background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 280, 740));
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel6.setText("Registros");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(50, 130, 184));
+        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 240, 10));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jLabel1.setText("Acerca de");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 700, -1, -1));
+
+        jButton1.setText("jButton1");
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 290, 40));
+
+        Background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 40, 300, 740));
+
+        jPanelSubThings.setBackground(new java.awt.Color(50, 130, 184));
+
+        javax.swing.GroupLayout jPanelSubThingsLayout = new javax.swing.GroupLayout(jPanelSubThings);
+        jPanelSubThings.setLayout(jPanelSubThingsLayout);
+        jPanelSubThingsLayout.setHorizontalGroup(
+            jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1090, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelSubThingsLayout.setVerticalGroup(
+            jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Background.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 1090, 90));
+        Background.add(jPanelSubThings, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 1090, 90));
 
         jLCerrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLCerrar.setText("X");
@@ -137,33 +154,44 @@ public class Frm_Principal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(1307, Short.MAX_VALUE)
+        jLFecha.setBackground(new java.awt.Color(255, 255, 255));
+        jLFecha.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        jLFecha.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jpMinLayout = new javax.swing.GroupLayout(jpMin);
+        jpMin.setLayout(jpMinLayout);
+        jpMinLayout.setHorizontalGroup(
+            jpMinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpMinLayout.createSequentialGroup()
+                .addContainerGap(664, Short.MAX_VALUE)
+                .addComponent(jLFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(502, 502, 502)
                 .addComponent(jLMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLCerrar)
-                .addGap(14, 14, 14))
+                .addGap(35, 35, 35))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        jpMinLayout.setVerticalGroup(
+            jpMinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpMinLayout.createSequentialGroup()
                 .addContainerGap(8, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLCerrar)
-                    .addComponent(jLMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addGroup(jpMinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jpMinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLCerrar)
+                        .addComponent(jLMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
         );
 
-        Background.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 40));
+        Background.add(jpMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,7 +242,7 @@ public class Frm_Principal extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-        //Styles FlatLaf
+        //Styles FlatLaf[102,204,255]
 //        UIManager.put( "Button.arc", 999 );
 //        UIManager.put( "TextComponent.arc", 999 );
 //        UIManager.put( "TabbedPane.showTabSeparators", true );
@@ -239,11 +267,17 @@ public class Frm_Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLCerrar;
+    private javax.swing.JLabel jLFecha;
     private javax.swing.JLabel jLMinimizar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanelSubThings;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JPanel jpMin;
     // End of variables declaration//GEN-END:variables
 }
