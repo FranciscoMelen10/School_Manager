@@ -67,6 +67,8 @@ public class Frm_Principal extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jPanelSubThings = new javax.swing.JPanel();
         jpMin = new javax.swing.JPanel();
         jLCerrar = new javax.swing.JLabel();
@@ -89,7 +91,7 @@ public class Frm_Principal extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jLabel2.setText("Control general");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,10 +108,19 @@ public class Frm_Principal extends javax.swing.JFrame {
         jLabel1.setText("Acerca de");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 700, -1, -1));
 
-        jButton1.setText("jButton1");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 290, 40));
+        jButton1.setText("Administracion");
+        jButton1.setBorder(null);
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 290, 50));
 
-        Background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 40, 300, 740));
+        jButton2.setText("Administracion");
+        jButton2.setBorder(null);
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 290, 50));
+
+        jButton3.setText("Administracion");
+        jButton3.setBorder(null);
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 290, 50));
+
+        Background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 290, 740));
 
         jPanelSubThings.setBackground(new java.awt.Color(50, 130, 184));
 
@@ -117,14 +128,14 @@ public class Frm_Principal extends javax.swing.JFrame {
         jPanelSubThings.setLayout(jPanelSubThingsLayout);
         jPanelSubThingsLayout.setHorizontalGroup(
             jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1090, Short.MAX_VALUE)
+            .addGap(0, 1080, Short.MAX_VALUE)
         );
         jPanelSubThingsLayout.setVerticalGroup(
             jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Background.add(jPanelSubThings, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 1090, 90));
+        Background.add(jPanelSubThings, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 1080, 90));
 
         jLCerrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLCerrar.setText("X");
@@ -188,10 +199,7 @@ public class Frm_Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,6 +276,8 @@ public class Frm_Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLCerrar;
     private javax.swing.JLabel jLFecha;
     private javax.swing.JLabel jLMinimizar;
