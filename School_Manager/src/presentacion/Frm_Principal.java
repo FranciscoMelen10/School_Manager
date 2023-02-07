@@ -63,17 +63,18 @@ public class Frm_Principal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel6 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jbAdministracion = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabelFoto = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jPanelSubThings = new javax.swing.JPanel();
         jpMin = new javax.swing.JPanel();
         jLCerrar = new javax.swing.JLabel();
         jLMinimizar = new javax.swing.JLabel();
         jLFecha = new javax.swing.JLabel();
+        jPContenedor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("School Manager");
@@ -83,42 +84,56 @@ public class Frm_Principal extends javax.swing.JFrame {
         setUndecorated(true);
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
-        Background.setPreferredSize(new java.awt.Dimension(1366, 768));
+        Background.setMinimumSize(new java.awt.Dimension(1360, 780));
+        Background.setPreferredSize(new java.awt.Dimension(1360, 780));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(15, 76, 117));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel2.setText("Control general");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
+        jLabel2.setText("School Manager ");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 260, 10));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 270, 10));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel6.setText("Registros");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
-
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 240, 10));
-
-        jLabel1.setText("Acerca de");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 700, -1, -1));
-
-        jButton1.setText("Administracion");
-        jButton1.setBorder(null);
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 290, 50));
-
-        jButton2.setText("Administracion");
+        jButton2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButton2.setText("Datos de escuela");
         jButton2.setBorder(null);
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 290, 50));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 290, 70));
 
-        jButton3.setText("Administracion");
-        jButton3.setBorder(null);
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 290, 50));
+        jbAdministracion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbAdministracion.setText("Administracion");
+        jbAdministracion.setBorder(null);
+        jbAdministracion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel2.add(jbAdministracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 290, 70));
+
+        jButton4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButton4.setText("Gestión");
+        jButton4.setBorder(null);
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 290, 70));
+
+        jButton5.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButton5.setText("Control");
+        jButton5.setBorder(null);
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 290, 70));
+
+        jLabelFoto.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabelFoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelFoto.setText("Foto escuela");
+        jLabelFoto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        jLabelFoto.setMaximumSize(new java.awt.Dimension(60, 15));
+        jLabelFoto.setMinimumSize(new java.awt.Dimension(60, 15));
+        jLabelFoto.setPreferredSize(new java.awt.Dimension(60, 15));
+        jPanel2.add(jLabelFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 130, 140));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Nombre de la Escuela");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 250, 30));
 
         Background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 290, 740));
 
@@ -185,7 +200,7 @@ public class Frm_Principal extends javax.swing.JFrame {
         jpMinLayout.setVerticalGroup(
             jpMinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMinLayout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpMinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jpMinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -195,15 +210,28 @@ public class Frm_Principal extends javax.swing.JFrame {
 
         Background.add(jpMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 40));
 
+        javax.swing.GroupLayout jPContenedorLayout = new javax.swing.GroupLayout(jPContenedor);
+        jPContenedor.setLayout(jPContenedorLayout);
+        jPContenedorLayout.setHorizontalGroup(
+            jPContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1070, Short.MAX_VALUE)
+        );
+        jPContenedorLayout.setVerticalGroup(
+            jPContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 650, Short.MAX_VALUE)
+        );
+
+        Background.add(jPContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 1070, 650));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 1370, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -275,19 +303,20 @@ public class Frm_Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLCerrar;
     private javax.swing.JLabel jLFecha;
     private javax.swing.JLabel jLMinimizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabelFoto;
+    private javax.swing.JPanel jPContenedor;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelSubThings;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JButton jbAdministracion;
     private javax.swing.JPanel jpMin;
     // End of variables declaration//GEN-END:variables
 }
