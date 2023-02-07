@@ -6,6 +6,10 @@ try {
     System.err.println( "Failed to initialize LaF" );
 }
 
+Size Pantalla:
+Full Screen: [1360,780]
+Sub Things: [1080, 90]
+Contenedor: [1070, 650]
 
 
 Desing aplication:

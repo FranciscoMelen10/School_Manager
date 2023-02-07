@@ -27,6 +27,8 @@ public class Frm_Inventario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1070, 650));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("En Proceso...");
 
@@ -35,16 +37,16 @@ public class Frm_Inventario extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(102, Short.MAX_VALUE)
+                .addContainerGap(602, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(100, 100, 100))
+                .addGap(270, 270, 270))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(299, 299, 299)
                 .addComponent(jLabel1)
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(303, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
