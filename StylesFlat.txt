@@ -8,7 +8,7 @@ try {
 
 Size Pantalla:
 Full Screen: [1360,780]
-Sub Things: [1080, 90]
+Sub Things: [1070, 50]
 Contenedor: [1070, 650]
 
 

@@ -1,13 +1,21 @@
 package presentacion;
 
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneLightIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatDraculaContrastIJTheme;
+import presentacion_administracion.Frm_Things;
+
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatNightOwlIJTheme;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 
 /**
@@ -19,8 +27,10 @@ public class Frm_Principal extends javax.swing.JFrame {
     /**
      * Creates new form Frm_Principal
      */
+    
+    
     public Frm_Principal() {
-        FlatNightOwlIJTheme.setup();
+        FlatDraculaContrastIJTheme.setup();
         initComponents();
         CargarImagen();
         this.setLocationRelativeTo(null);
@@ -28,6 +38,9 @@ public class Frm_Principal extends javax.swing.JFrame {
         SetDate();
     }
     
+    
+    //Funciones
+
     private void SetDate(){
         LocalDate now = LocalDate.now();
         int dia = now.getDayOfMonth();
@@ -44,15 +57,36 @@ public class Frm_Principal extends javax.swing.JFrame {
         System.out.println(widht + "X" + height );
     }
     
-        private void CargarImagen(){
+    private void CargarImagen(){
         try {
             Image img = ImageIO.read(new File("School Manager Icon.png"));
             this.setIconImage(img);
-            
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
     }
+    
+    public void CargarContent(JPanel jp){
+        jp.setSize(1070, 690);
+        jp.setLocation(0, 0);
+        jPContenedor.removeAll();
+        jPContenedor.add(jp, BorderLayout.CENTER);
+        jPContenedor.revalidate();
+        jPContenedor.repaint();
+        System.out.println("fsfsfsf:"+jp);
+    }
+    
+    private void CargarThing(JPanel jp){
+        jp.setSize(1070, 50);
+        jp.setLocation(0, 0);
+        jPanelSubThings.removeAll();
+        jPanelSubThings.add(jp, BorderLayout.CENTER);
+        jPanelSubThings.revalidate();
+        jPanelSubThings.repaint();
+        System.out.println("fsfsfsf:"+jp.getName());
+    }
+        
+        
 
     
     @SuppressWarnings("unchecked")
@@ -70,6 +104,7 @@ public class Frm_Principal extends javax.swing.JFrame {
         jLabelFoto = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanelSubThings = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jpMin = new javax.swing.JPanel();
         jLCerrar = new javax.swing.JLabel();
         jLMinimizar = new javax.swing.JLabel();
@@ -108,6 +143,11 @@ public class Frm_Principal extends javax.swing.JFrame {
         jbAdministracion.setText("Administracion");
         jbAdministracion.setBorder(null);
         jbAdministracion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jbAdministracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAdministracionActionPerformed(evt);
+            }
+        });
         jPanel2.add(jbAdministracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 290, 70));
 
         jButton4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
@@ -139,18 +179,27 @@ public class Frm_Principal extends javax.swing.JFrame {
 
         jPanelSubThings.setBackground(new java.awt.Color(50, 130, 184));
 
+        jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel3.setText("School Manager");
+
         javax.swing.GroupLayout jPanelSubThingsLayout = new javax.swing.GroupLayout(jPanelSubThings);
         jPanelSubThings.setLayout(jPanelSubThingsLayout);
         jPanelSubThingsLayout.setHorizontalGroup(
             jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1080, Short.MAX_VALUE)
+            .addGroup(jPanelSubThingsLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel3)
+                .addContainerGap(870, Short.MAX_VALUE))
         );
         jPanelSubThingsLayout.setVerticalGroup(
             jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSubThingsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addContainerGap())
         );
 
-        Background.add(jPanelSubThings, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 1080, 90));
+        Background.add(jPanelSubThings, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 1070, 50));
 
         jLCerrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLCerrar.setText("X");
@@ -218,10 +267,10 @@ public class Frm_Principal extends javax.swing.JFrame {
         );
         jPContenedorLayout.setVerticalGroup(
             jPContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGap(0, 690, Short.MAX_VALUE)
         );
 
-        Background.add(jPContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 1070, 650));
+        Background.add(jPContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 1070, 690));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -273,6 +322,12 @@ public class Frm_Principal extends javax.swing.JFrame {
         jLMinimizar.setBackground(Color.white);
     }//GEN-LAST:event_jLMinimizarMouseExited
 
+    private void jbAdministracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAdministracionActionPerformed
+        // TODO add your handling code here:
+        Frm_Things frm_thing = new Frm_Things();
+        CargarThing(frm_thing.sizePanelThing());
+    }//GEN-LAST:event_jbAdministracionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -311,6 +366,7 @@ public class Frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLMinimizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelFoto;
     private javax.swing.JPanel jPContenedor;
     private javax.swing.JPanel jPanel2;
