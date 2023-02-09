@@ -56,7 +56,7 @@ public class Frm_Articulo extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jpBackground.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 342, 1070, 370));
+        jpBackground.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 1070, 270));
 
         jPSubContent.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
