@@ -33,7 +33,7 @@ public class Frm_Things extends javax.swing.JFrame {
     }
     
     private void CargarThing(JPanel jp){
-        jp.setSize(1070, 740);
+        jp.setSize(1070, 660);
         jp.setLocation(0, 0);
         jPGerneral.removeAll();
         jPGerneral.add(jp, BorderLayout.CENTER);
@@ -63,6 +63,12 @@ public class Frm_Things extends javax.swing.JFrame {
         jbBodega = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
         jPGerneral = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 90));
@@ -77,46 +83,54 @@ public class Frm_Things extends javax.swing.JFrame {
         jPSubThing.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbArticulo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbArticulo.setForeground(new java.awt.Color(255, 255, 255));
+        jbArticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Articulo.png"))); // NOI18N
         jbArticulo.setText("Articulo");
         jbArticulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbArticuloActionPerformed(evt);
             }
         });
-        jPSubThing.add(jbArticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 240, 50));
+        jPSubThing.add(jbArticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 240, 60));
 
         jbInventario.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbInventario.setForeground(new java.awt.Color(255, 255, 255));
+        jbInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Inventario.png"))); // NOI18N
         jbInventario.setText("Inventario");
         jbInventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbInventarioActionPerformed(evt);
             }
         });
-        jPSubThing.add(jbInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 240, 50));
+        jPSubThing.add(jbInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 240, 60));
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPSubThing.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 10, 30));
 
         jbTipoAticulo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbTipoAticulo.setForeground(new java.awt.Color(255, 255, 255));
+        jbTipoAticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Tipo Articulo.png"))); // NOI18N
         jbTipoAticulo.setText("Tipo Aticulo");
         jbTipoAticulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbTipoAticuloActionPerformed(evt);
             }
         });
-        jPSubThing.add(jbTipoAticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, 230, 50));
+        jPSubThing.add(jbTipoAticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, 230, 60));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPSubThing.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 10, 30));
 
         jbBodega.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbBodega.setForeground(new java.awt.Color(255, 255, 255));
+        jbBodega.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Bodega.png"))); // NOI18N
         jbBodega.setText("Bodega");
         jbBodega.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbBodegaActionPerformed(evt);
             }
         });
-        jPSubThing.add(jbBodega, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 50));
+        jPSubThing.add(jbBodega, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 60));
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPSubThing.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 10, 30));
@@ -125,15 +139,61 @@ public class Frm_Things extends javax.swing.JFrame {
 
         jPGerneral.setBackground(new java.awt.Color(187, 225, 250));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/School Manager Icon.png"))); // NOI18N
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Eras Demi ITC", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Administración:");
+
         javax.swing.GroupLayout jPGerneralLayout = new javax.swing.GroupLayout(jPGerneral);
         jPGerneral.setLayout(jPGerneralLayout);
         jPGerneralLayout.setHorizontalGroup(
             jPGerneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1070, Short.MAX_VALUE)
+            .addGroup(jPGerneralLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addGroup(jPGerneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel3))
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(926, 926, 926)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(844, 844, 844)
+                        .addComponent(jLabel2))
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(jPGerneralLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPGerneralLayout.setVerticalGroup(
             jPGerneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 660, Short.MAX_VALUE)
+            .addGroup(jPGerneralLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPGerneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel3))
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPGerneralLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(4, 4, 4)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         BackgroundThings.add(jPGerneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1070, 660));
@@ -158,6 +218,7 @@ public class Frm_Things extends javax.swing.JFrame {
 
     private void jbArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbArticuloActionPerformed
         // TODO add your handling code here:
+        jPGerneral.removeAll();
         CargarThing(frm_art.sizePanelArticulo());
     }//GEN-LAST:event_jbArticuloActionPerformed
 
@@ -206,12 +267,18 @@ public class Frm_Things extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundThings;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPGerneral;
     private javax.swing.JPanel jPSubThing;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JButton jbArticulo;
     private javax.swing.JButton jbBodega;
     private javax.swing.JButton jbInventario;
