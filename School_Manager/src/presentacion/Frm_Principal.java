@@ -66,24 +66,14 @@ public class Frm_Principal extends javax.swing.JFrame {
         }
     }
     
-    public void CargarContent(JPanel jp){
-        jp.setSize(1070, 690);
+    
+    private void CargarThing(JPanel jp){
+        jp.setSize(1070, 740);
         jp.setLocation(0, 0);
         jPContenedor.removeAll();
         jPContenedor.add(jp, BorderLayout.CENTER);
         jPContenedor.revalidate();
         jPContenedor.repaint();
-        System.out.println("fsfsfsf:"+jp);
-    }
-    
-    private void CargarThing(JPanel jp){
-        jp.setSize(1070, 50);
-        jp.setLocation(0, 0);
-        jPanelSubThings.removeAll();
-        jPanelSubThings.add(jp, BorderLayout.CENTER);
-        jPanelSubThings.revalidate();
-        jPanelSubThings.repaint();
-        System.out.println("fsfsfsf:"+jp.getName());
     }
         
         
@@ -103,13 +93,12 @@ public class Frm_Principal extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabelFoto = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jPanelSubThings = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jPContenedor = new javax.swing.JPanel();
         jpMin = new javax.swing.JPanel();
         jLCerrar = new javax.swing.JLabel();
         jLMinimizar = new javax.swing.JLabel();
         jLFecha = new javax.swing.JLabel();
-        jPContenedor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("School Manager");
@@ -123,7 +112,7 @@ public class Frm_Principal extends javax.swing.JFrame {
         Background.setPreferredSize(new java.awt.Dimension(1360, 780));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(15, 76, 117));
+        jPanel2.setBackground(new java.awt.Color(20, 40, 80));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
@@ -132,14 +121,20 @@ public class Frm_Principal extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 270, 10));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 270, 10));
 
+        jButton2.setBackground(new java.awt.Color(39, 73, 109));
         jButton2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jButton2.setText("Datos de escuela");
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Acerca De.png"))); // NOI18N
+        jButton2.setText("Acerca De");
         jButton2.setBorder(null);
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 290, 70));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 290, 70));
 
+        jbAdministracion.setBackground(new java.awt.Color(39, 73, 109));
         jbAdministracion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbAdministracion.setForeground(new java.awt.Color(255, 255, 255));
+        jbAdministracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Admistracion.png"))); // NOI18N
         jbAdministracion.setText("Administracion");
         jbAdministracion.setBorder(null);
         jbAdministracion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -148,17 +143,23 @@ public class Frm_Principal extends javax.swing.JFrame {
                 jbAdministracionActionPerformed(evt);
             }
         });
-        jPanel2.add(jbAdministracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 290, 70));
+        jPanel2.add(jbAdministracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 290, 70));
 
+        jButton4.setBackground(new java.awt.Color(39, 73, 109));
         jButton4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Gestion.png"))); // NOI18N
         jButton4.setText("Gestión");
         jButton4.setBorder(null);
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 290, 70));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 290, 70));
 
+        jButton5.setBackground(new java.awt.Color(39, 73, 109));
         jButton5.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jButton5.setText("Control");
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Economia.png"))); // NOI18N
+        jButton5.setText("Economía");
         jButton5.setBorder(null);
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 290, 70));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 290, 70));
 
         jLabelFoto.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabelFoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -167,39 +168,38 @@ public class Frm_Principal extends javax.swing.JFrame {
         jLabelFoto.setMaximumSize(new java.awt.Dimension(60, 15));
         jLabelFoto.setMinimumSize(new java.awt.Dimension(60, 15));
         jLabelFoto.setPreferredSize(new java.awt.Dimension(60, 15));
-        jPanel2.add(jLabelFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 130, 140));
+        jPanel2.add(jLabelFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 130, 140));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Nombre de la Escuela");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 250, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 250, 30));
+
+        jButton3.setBackground(new java.awt.Color(39, 73, 109));
+        jButton3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Datos Escuela.png"))); // NOI18N
+        jButton3.setText("Datos de escuela");
+        jButton3.setBorder(null);
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 290, 70));
 
         Background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 290, 740));
 
-        jPanelSubThings.setBackground(new java.awt.Color(50, 130, 184));
+        jPContenedor.setBackground(new java.awt.Color(50, 130, 184));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel3.setText("School Manager");
-
-        javax.swing.GroupLayout jPanelSubThingsLayout = new javax.swing.GroupLayout(jPanelSubThings);
-        jPanelSubThings.setLayout(jPanelSubThingsLayout);
-        jPanelSubThingsLayout.setHorizontalGroup(
-            jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSubThingsLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel3)
-                .addContainerGap(870, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPContenedorLayout = new javax.swing.GroupLayout(jPContenedor);
+        jPContenedor.setLayout(jPContenedorLayout);
+        jPContenedorLayout.setHorizontalGroup(
+            jPContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1070, Short.MAX_VALUE)
         );
-        jPanelSubThingsLayout.setVerticalGroup(
-            jPanelSubThingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSubThingsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addContainerGap())
+        jPContenedorLayout.setVerticalGroup(
+            jPContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 740, Short.MAX_VALUE)
         );
 
-        Background.add(jPanelSubThings, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 1070, 50));
+        Background.add(jPContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 1070, 740));
 
         jLCerrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLCerrar.setText("X");
@@ -258,19 +258,6 @@ public class Frm_Principal extends javax.swing.JFrame {
         );
 
         Background.add(jpMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 40));
-
-        javax.swing.GroupLayout jPContenedorLayout = new javax.swing.GroupLayout(jPContenedor);
-        jPContenedor.setLayout(jPContenedorLayout);
-        jPContenedorLayout.setHorizontalGroup(
-            jPContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1070, Short.MAX_VALUE)
-        );
-        jPContenedorLayout.setVerticalGroup(
-            jPContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
-        );
-
-        Background.add(jPContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 1070, 690));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -359,6 +346,7 @@ public class Frm_Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLCerrar;
@@ -366,11 +354,9 @@ public class Frm_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLMinimizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelFoto;
     private javax.swing.JPanel jPContenedor;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanelSubThings;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton jbAdministracion;
     private javax.swing.JPanel jpMin;

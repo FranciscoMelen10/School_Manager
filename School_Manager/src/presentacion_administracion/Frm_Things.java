@@ -6,7 +6,6 @@ package presentacion_administracion;
 
 import java.awt.BorderLayout;
 import presentacion_administracion.Frm_Articulo;
-import presentacion.Frm_Principal;
 
 import javax.swing.JPanel;
 
@@ -20,7 +19,9 @@ public class Frm_Things extends javax.swing.JFrame {
      * Creates new form Frm_Things
      */
     
-    Frm_Principal frm_prin = new Frm_Principal();
+    Frm_Articulo frm_art = new Frm_Articulo();
+    
+    
     
     public Frm_Things() {
         initComponents();
@@ -29,6 +30,15 @@ public class Frm_Things extends javax.swing.JFrame {
     
     public JPanel sizePanelThing(){
         return BackgroundThings;
+    }
+    
+    private void CargarThing(JPanel jp){
+        jp.setSize(1070, 740);
+        jp.setLocation(0, 0);
+        jPGerneral.removeAll();
+        jPGerneral.add(jp, BorderLayout.CENTER);
+        jPGerneral.revalidate();
+        jPGerneral.repaint();
     }
     
 
@@ -43,43 +53,28 @@ public class Frm_Things extends javax.swing.JFrame {
     private void initComponents() {
 
         BackgroundThings = new javax.swing.JPanel();
-        jbTipoAticulo = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jbBodega = new javax.swing.JButton();
-        jSeparator3 = new javax.swing.JSeparator();
-        jbInventario = new javax.swing.JButton();
+        jPSubThing = new javax.swing.JPanel();
         jbArticulo = new javax.swing.JButton();
-        jSeparator5 = new javax.swing.JSeparator();
+        jbInventario = new javax.swing.JButton();
         jSeparator6 = new javax.swing.JSeparator();
+        jbTipoAticulo = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
+        jbBodega = new javax.swing.JButton();
+        jSeparator5 = new javax.swing.JSeparator();
+        jPGerneral = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 90));
 
-        BackgroundThings.setBackground(new java.awt.Color(50, 130, 184));
+        BackgroundThings.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundThings.setMinimumSize(new java.awt.Dimension(1070, 50));
         BackgroundThings.setPreferredSize(new java.awt.Dimension(1070, 50));
         BackgroundThings.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jbTipoAticulo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jbTipoAticulo.setText("Tipo Aticulo");
-        BackgroundThings.add(jbTipoAticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 0, 230, 50));
         BackgroundThings.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, -1, -1));
 
-        jbBodega.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jbBodega.setText("Bodega");
-        BackgroundThings.add(jbBodega, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 50));
-
-        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        BackgroundThings.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 10, 30));
-
-        jbInventario.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jbInventario.setText("Inventario");
-        jbInventario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbInventarioActionPerformed(evt);
-            }
-        });
-        BackgroundThings.add(jbInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 240, 50));
+        jPSubThing.setBackground(new java.awt.Color(50, 130, 184));
+        jPSubThing.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbArticulo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jbArticulo.setText("Articulo");
@@ -88,13 +83,60 @@ public class Frm_Things extends javax.swing.JFrame {
                 jbArticuloActionPerformed(evt);
             }
         });
-        BackgroundThings.add(jbArticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 240, 50));
+        jPSubThing.add(jbArticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 240, 50));
 
-        jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        BackgroundThings.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 10, 30));
+        jbInventario.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbInventario.setText("Inventario");
+        jbInventario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbInventarioActionPerformed(evt);
+            }
+        });
+        jPSubThing.add(jbInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 240, 50));
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        BackgroundThings.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 10, 30));
+        jPSubThing.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 10, 30));
+
+        jbTipoAticulo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbTipoAticulo.setText("Tipo Aticulo");
+        jbTipoAticulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbTipoAticuloActionPerformed(evt);
+            }
+        });
+        jPSubThing.add(jbTipoAticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, 230, 50));
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPSubThing.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 10, 30));
+
+        jbBodega.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jbBodega.setText("Bodega");
+        jbBodega.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBodegaActionPerformed(evt);
+            }
+        });
+        jPSubThing.add(jbBodega, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 50));
+
+        jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPSubThing.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 10, 30));
+
+        BackgroundThings.add(jPSubThing, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 80));
+
+        jPGerneral.setBackground(new java.awt.Color(187, 225, 250));
+
+        javax.swing.GroupLayout jPGerneralLayout = new javax.swing.GroupLayout(jPGerneral);
+        jPGerneral.setLayout(jPGerneralLayout);
+        jPGerneralLayout.setHorizontalGroup(
+            jPGerneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1070, Short.MAX_VALUE)
+        );
+        jPGerneralLayout.setVerticalGroup(
+            jPGerneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 660, Short.MAX_VALUE)
+        );
+
+        BackgroundThings.add(jPGerneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1070, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,7 +146,7 @@ public class Frm_Things extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackgroundThings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(BackgroundThings, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
         );
 
         pack();
@@ -116,10 +158,16 @@ public class Frm_Things extends javax.swing.JFrame {
 
     private void jbArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbArticuloActionPerformed
         // TODO add your handling code here:
-        Frm_Articulo frm_art = new Frm_Articulo();
-        frm_prin.CargarContent(frm_art.sizePanelArticulo());
-        
+        CargarThing(frm_art.sizePanelArticulo());
     }//GEN-LAST:event_jbArticuloActionPerformed
+
+    private void jbBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBodegaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbBodegaActionPerformed
+
+    private void jbTipoAticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTipoAticuloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbTipoAticuloActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,6 +206,8 @@ public class Frm_Things extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundThings;
+    private javax.swing.JPanel jPGerneral;
+    private javax.swing.JPanel jPSubThing;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator5;
