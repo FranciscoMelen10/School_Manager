@@ -20,6 +20,11 @@ public class Bodega {
         this.estado = estado;
     }
 
+    public Bodega() {
+    }
+    
+    
+
     public int getBodegaID() {
         return bodegaID;
     }
