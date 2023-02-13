@@ -2,6 +2,8 @@ package presentacion_administracion;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatDraculaContrastIJTheme;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
@@ -11,10 +13,18 @@ import javax.swing.UIManager;
  */
 public class Frm_Articulo extends javax.swing.JFrame {
 
-    /**
+    
+/**
      * Creates new form Frm_Inventario
      */
-    public Frm_Articulo() {
+    //Variables
+    
+    
+    
+    
+    
+    
+        public Frm_Articulo() {
         FlatDraculaContrastIJTheme.setup();
         initComponents();
     }
@@ -166,6 +176,11 @@ public class Frm_Articulo extends javax.swing.JFrame {
 
         jBNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/save.png"))); // NOI18N
         jBNew.setText("Nuevo");
+        jBNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNewActionPerformed(evt);
+            }
+        });
         jPSubContent.add(jBNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 30, 140, 40));
 
         jBDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/basura.png"))); // NOI18N
@@ -211,9 +226,27 @@ public class Frm_Articulo extends javax.swing.JFrame {
         this.jTID.setText("");
         this.jTNombre.setText("");
         this.jTPrecio.setText("");
-        //Date
+        this.jTDate.setDate(null);
         
     }//GEN-LAST:event_jBCleanActionPerformed
+
+    private void jBNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNewActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+        
+        //Tranformacion de Fecha (Ingles a dd/MM/yyyy)
+        Date date = jTDate.getDate();
+        SimpleDateFormat transformar = new SimpleDateFormat("dd/MM/yyyy");
+        String fecha = transformar.format(date);
+        System.out.println(fecha);
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jBNewActionPerformed
 
     /**
      * @param args the command line arguments

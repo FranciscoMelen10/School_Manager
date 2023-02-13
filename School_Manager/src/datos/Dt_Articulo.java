@@ -1,7 +1,8 @@
 package datos;
 
 //Entidades
-import entidades.Escuela;
+import entidades.Articulo;
+
 
 //Librerias
 import java.sql.Connection;
@@ -17,20 +18,20 @@ import java.util.ArrayList;
  * 
  */
 
-public class Dt_Escuela {
+public class Dt_Articulo {
     
     //Conexion
     private Connection con = null;
     private PreparedStatement ps = null;
     private ResultSet rs = null;
     
-     //metodos
+    //metodos
      @SuppressWarnings("CallToPrintStackTrace")
     public void cargarDatos()
     {
         try{
             con = Conexion.getConnection(); //obtenemos la conexion a la base de datos
-            ps = con.prepareStatement("SELECT EscuelaID,Nombre,Direccion,Telefono,Email,Fecha_fundacion,Hora_abierto,Hora_cerrado,Estado FROM Escuela", 
+            ps = con.prepareStatement("SELECT ArticuloID,TipoArticuloID,Nombre,Descripcion,Marca,Fecha_ingreso,Precio,Estado FROM Articulo", 
                     ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE, ResultSet.HOLD_CURSORS_OVER_COMMIT);
             rs = ps.executeQuery();
         }
@@ -40,23 +41,24 @@ public class Dt_Escuela {
         }
     }
     
-    @SuppressWarnings("CallToPrintStackTrace")
-    public ArrayList<Escuela> listarEscuela(){
-        ArrayList<Escuela> listEscuela = new ArrayList<Escuela>();
+    //Llenar el arreglo con los datos de la DB
+    
+        @SuppressWarnings("CallToPrintStackTrace")
+    public ArrayList<Articulo> listarArticulos(){
+        ArrayList<Articulo> listArticulo = new ArrayList<Articulo>();
         try{
             this.cargarDatos();
             while(rs.next()){
-                Escuela esc = new Escuela();
-                esc.setEscuelaID(rs.getInt("EscuelaID"));
-                esc.setNombre(rs.getString("Nombre"));
-                esc.setDireccion(rs.getString("Direccion"));
-                esc.setTelefono(rs.getString("Telefono"));
-                esc.setEmail(rs.getString("Email"));
-                esc.setFecha_fundacion(rs.getString("Fecha_fundacion"));
-                esc.setHora_abierto(rs.getString("Hora_abierto"));
-                esc.setHora_cerrado(rs.getString("Hora_cerrado"));
-                esc.setEstado(rs.getInt("Estado"));
-                listEscuela.add(esc);
+                Articulo art = new Articulo();
+                art.setArticuloID(rs.getInt("ArticuloID"));
+                art.setTipoArticuloID(rs.getInt("TipoArticuloID"));
+                art.setNombre(rs.getString("Nombre"));
+                art.setDescripcion(rs.getString("Descripcion"));
+                art.setMarca(rs.getString("Marca"));
+                art.setFecha(rs.getString("Fecha_ingreso"));
+                art.setPrecio(rs.getFloat("Precio"));
+                art.setEstado(rs.getInt("Estado"));
+                listArticulo.add(art);
             }     
         }catch(SQLException e){
             System.out.println("El error en listarDeptos(): "+e.getMessage());
@@ -75,10 +77,13 @@ public class Dt_Escuela {
                 }
             }catch(SQLException e){
                 e.printStackTrace();
-            }  
-        }
-        
-        
-        return listEscuela;
-}
+                }  
+            }
+        return listArticulo;
+    }
+    
+    
+    
+    
+    
 }

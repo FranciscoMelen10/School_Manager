@@ -1,0 +1,7 @@
+//Tranformacion de Fecha (Ingles a dd/MM/yyyy)
+        Date date = jTDate.getDate();
+        SimpleDateFormat transformar = new SimpleDateFormat("dd/MM/yyyy");
+        String fecha = transformar.format(date);
+        System.out.println(fecha);
+
+

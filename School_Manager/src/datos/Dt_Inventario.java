@@ -1,7 +1,8 @@
 package datos;
 
-//Entidades
-import entidades.Escuela;
+//Datos
+import entidades.Inventario;
+
 
 //Librerias
 import java.sql.Connection;
@@ -10,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 /**
  *
  * @author Francisco De Jesús Meléndez Simplina
@@ -17,8 +19,9 @@ import java.util.ArrayList;
  * 
  */
 
-public class Dt_Escuela {
+public class Dt_Inventario {
     
+
     //Conexion
     private Connection con = null;
     private PreparedStatement ps = null;
@@ -30,7 +33,7 @@ public class Dt_Escuela {
     {
         try{
             con = Conexion.getConnection(); //obtenemos la conexion a la base de datos
-            ps = con.prepareStatement("SELECT EscuelaID,Nombre,Direccion,Telefono,Email,Fecha_fundacion,Hora_abierto,Hora_cerrado,Estado FROM Escuela", 
+            ps = con.prepareStatement("SELECT InventarioID,ArticuloID,BodegaID,Nombre,Direccion,Telefono,Email,Fecha_fundacion,Hora_abierto,Hora_cerrado,Estado FROM Inventario", 
                     ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE, ResultSet.HOLD_CURSORS_OVER_COMMIT);
             rs = ps.executeQuery();
         }
@@ -41,22 +44,22 @@ public class Dt_Escuela {
     }
     
     @SuppressWarnings("CallToPrintStackTrace")
-    public ArrayList<Escuela> listarEscuela(){
-        ArrayList<Escuela> listEscuela = new ArrayList<Escuela>();
+    public ArrayList<Inventario> listarInventarios(){
+        ArrayList<Inventario> listInventario = new ArrayList<Inventario>();
         try{
             this.cargarDatos();
             while(rs.next()){
-                Escuela esc = new Escuela();
-                esc.setEscuelaID(rs.getInt("EscuelaID"));
-                esc.setNombre(rs.getString("Nombre"));
-                esc.setDireccion(rs.getString("Direccion"));
-                esc.setTelefono(rs.getString("Telefono"));
-                esc.setEmail(rs.getString("Email"));
-                esc.setFecha_fundacion(rs.getString("Fecha_fundacion"));
-                esc.setHora_abierto(rs.getString("Hora_abierto"));
-                esc.setHora_cerrado(rs.getString("Hora_cerrado"));
-                esc.setEstado(rs.getInt("Estado"));
-                listEscuela.add(esc);
+                Inventario inv = new Inventario();
+                inv.setInventarioID(rs.getInt("InventarioID"));
+                inv.setArticuloID(rs.getInt("ArticuloID"));
+                inv.setBodegaID(rs.getInt("BodegaID"));
+                inv.setCantidad_inicial(rs.getInt("Cantidad_inicial"));
+                inv.setFecha(rs.getString("Fecha_ingreso"));
+                inv.setMovimientos_positivos(rs.getInt("Movimientos_positivos"));
+                inv.setMovimientos_negativos(rs.getInt("Movimientos_negativos"));
+                inv.setSaldo_final(rs.getInt("Saldo_final"));
+                inv.setEstado(rs.getInt("Estado"));
+                listInventario.add(inv);
             }     
         }catch(SQLException e){
             System.out.println("El error en listarDeptos(): "+e.getMessage());
@@ -79,6 +82,6 @@ public class Dt_Escuela {
         }
         
         
-        return listEscuela;
-}
+        return listInventario;
+    }
 }
