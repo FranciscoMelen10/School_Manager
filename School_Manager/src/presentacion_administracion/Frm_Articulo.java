@@ -61,11 +61,11 @@ public class Frm_Articulo extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel8 = new javax.swing.JLabel();
         jBNew = new javax.swing.JButton();
         jBDelete = new javax.swing.JButton();
         jDEdit = new javax.swing.JButton();
         jBClean = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,7 +111,7 @@ public class Frm_Articulo extends javax.swing.JFrame {
             jTArticulo.getColumnModel().getColumn(6).setResizable(false);
         }
 
-        jpBackground.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 1070, 270));
+        jpBackground.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 1070, 310));
 
         jPSubContent.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPSubContent.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -123,7 +123,7 @@ public class Frm_Articulo extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel2.setText("Precio:");
-        jPSubContent.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, -1));
+        jPSubContent.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 60, -1));
 
         jcTipoArticulo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar..." }));
         jPSubContent.add(jcTipoArticulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 280, 30));
@@ -136,7 +136,7 @@ public class Frm_Articulo extends javax.swing.JFrame {
         jTDate.setBackground(new java.awt.Color(255, 255, 255));
         jTDate.setForeground(new java.awt.Color(255, 255, 255));
         jTDate.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jPSubContent.add(jTDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 220, 30));
+        jPSubContent.add(jTDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 220, 30));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel4.setText("Nombre:");
@@ -146,22 +146,22 @@ public class Frm_Articulo extends javax.swing.JFrame {
         jTDescripcion.setRows(5);
         jScrollPane2.setViewportView(jTDescripcion);
 
-        jPSubContent.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 220, 90));
+        jPSubContent.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 220, 90));
 
         jTPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTPrecioActionPerformed(evt);
             }
         });
-        jPSubContent.add(jTPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 220, 30));
+        jPSubContent.add(jTPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 220, 30));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel6.setText("Descripcion:");
-        jPSubContent.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, -1, -1));
+        jPSubContent.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel7.setText("ID:");
-        jPSubContent.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Articulo.png"))); // NOI18N
+        jPSubContent.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 60, 60));
 
         jLabel5.setFont(new java.awt.Font("Franklin Gothic Heavy", 0, 36)); // NOI18N
         jLabel5.setText("Articulo");
@@ -169,10 +169,6 @@ public class Frm_Articulo extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPSubContent.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 250, 10));
-
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Articulo.png"))); // NOI18N
-        jPSubContent.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 60, 60));
 
         jBNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/save.png"))); // NOI18N
         jBNew.setText("Nuevo");
@@ -200,7 +196,11 @@ public class Frm_Articulo extends javax.swing.JFrame {
         });
         jPSubContent.add(jBClean, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 230, 140, 40));
 
-        jpBackground.add(jPSubContent, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1030, 300));
+        jLabel9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel9.setText("ID:");
+        jPSubContent.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 30, -1));
+
+        jpBackground.add(jPSubContent, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1030, 300));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -231,10 +231,6 @@ public class Frm_Articulo extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCleanActionPerformed
 
     private void jBNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNewActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
         
         //Tranformacion de Fecha (Ingles a dd/MM/yyyy)
         Date date = jTDate.getDate();
@@ -284,7 +280,7 @@ public class Frm_Articulo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPSubContent;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

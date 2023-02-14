@@ -20,6 +20,9 @@ public class Frm_Things extends javax.swing.JFrame {
      */
     
     Frm_Articulo frm_art = new Frm_Articulo();
+    Frm_TipoArticulo frm_tpart = new Frm_TipoArticulo();
+    Frm_Bodega frm_bode = new Frm_Bodega();
+    Frm_Inventario frm_inv = new Frm_Inventario();
     
     
     
@@ -95,7 +98,7 @@ public class Frm_Things extends javax.swing.JFrame {
 
         jbInventario.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jbInventario.setForeground(new java.awt.Color(255, 255, 255));
-        jbInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Inventario.png"))); // NOI18N
+        jbInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Invetario.png"))); // NOI18N
         jbInventario.setText("Inventario");
         jbInventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +112,7 @@ public class Frm_Things extends javax.swing.JFrame {
 
         jbTipoAticulo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jbTipoAticulo.setForeground(new java.awt.Color(255, 255, 255));
-        jbTipoAticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Tipo Articulo.png"))); // NOI18N
+        jbTipoAticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/TipoArticulo.png"))); // NOI18N
         jbTipoAticulo.setText("Tipo Aticulo");
         jbTipoAticulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,21 +216,19 @@ public class Frm_Things extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbInventarioActionPerformed
-        // TODO add your handling code here:
+        CargarThing(frm_inv.sizePanelInventario());
     }//GEN-LAST:event_jbInventarioActionPerformed
 
     private void jbArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbArticuloActionPerformed
-        // TODO add your handling code here:
-        jPGerneral.removeAll();
         CargarThing(frm_art.sizePanelArticulo());
     }//GEN-LAST:event_jbArticuloActionPerformed
 
     private void jbBodegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBodegaActionPerformed
-        // TODO add your handling code here:
+        CargarThing(frm_bode.sizePanelBodega());
     }//GEN-LAST:event_jbBodegaActionPerformed
 
     private void jbTipoAticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTipoAticuloActionPerformed
-        // TODO add your handling code here:
+        CargarThing(frm_tpart.sizePanelTipoArticulo());
     }//GEN-LAST:event_jbTipoAticuloActionPerformed
 
     /**

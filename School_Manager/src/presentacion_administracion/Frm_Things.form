@@ -107,7 +107,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/recursos/Inventario.png"/>
+                  <Image iconType="3" name="/recursos/Invetario.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Inventario"/>
               </Properties>
@@ -139,7 +139,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/recursos/Tipo Articulo.png"/>
+                  <Image iconType="3" name="/recursos/TipoArticulo.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Tipo Aticulo"/>
               </Properties>
